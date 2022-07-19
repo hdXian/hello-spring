@@ -21,6 +21,8 @@ public class HelloController {
         return "hello_template";
     }
 
+    
+    // API 방식 (helloString, helloApi)
     @GetMapping("hello_string") // 웹 브라우저에서 요청할 때 입력하는 값 ex) https://localhost:8080/hello_string?name="spring"
     @ResponseBody // http 통신의 바디 부분에 데이터를 넣는다.
     public String helloString(@RequestParam("name") String name) {
