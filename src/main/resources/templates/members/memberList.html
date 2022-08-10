@@ -11,7 +11,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr th:each="member : ${members}"> <!-- ${members} => model 안의 members를 가져옴. -->
+      <tr th:each="member : ${members}"> <!-- (5-3) ${members} => model 안의 members를 가져옴. -->
         <td th:text="${member.id}"></td>
         <td th:text="${member.name}"></td>
       </tr>

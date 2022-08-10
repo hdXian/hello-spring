@@ -4,10 +4,12 @@ import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional // (6-4) 데이터를 저장할 땐 항상 트랜잭션이 있어야 한다.
 public class MemberService {
 
     private final MemberRepository memberRepository;
