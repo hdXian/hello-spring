@@ -28,6 +28,10 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+
+        // (7-2) AOP가 적용된 클래스는 호출 시 프록시 객체가 생성되어 AOP 관련 처리를 먼저 하고 실제 객체가 요청한 동작을 수행한다.
+        // 인젝션되는 객체의 클래스 아이디를 확인해보면 실제 클래스 객체가 아니다.
+        // System.out.println("memberService: " + memberService.getClass());
     }
 
     @GetMapping("/members/new") // (5-2)클라이언트의 Get 요청을 받아 처리.
